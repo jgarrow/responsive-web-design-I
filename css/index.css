@@ -375,6 +375,7 @@ footer {
     header div {
         padding-right: 0;
         margin: 1rem auto 2rem;
+        width: 30%;
     }
 
     header nav a {
@@ -388,6 +389,27 @@ footer {
 
     .banner-img img {
         display: none;
+    }
+
+    .services-foot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-foot .foot-content {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .services-foot .foot-img{
+        width: 100%;
+        margin: 6% auto;
+        justify-content: center;
+    }
+
+    .copyright {
+        margin: 2%;
     }
 }
 
