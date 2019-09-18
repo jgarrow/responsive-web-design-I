@@ -390,3 +390,47 @@ footer {
         display: none;
     }
 }
+
+@media (max-width: 500px) {
+
+    header nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    header nav a {
+        width: 100%;
+        padding: 0.5rem;
+        border-bottom: 1px solid gray;
+    }
+
+    header nav a:first-child {
+        border-top: 1px solid gray;
+    }
+
+    header div {
+        margin: 0 auto 1rem;
+        width: 30%;
+    }
+
+    .banner {
+        padding: 3rem 0 5rem;
+    }
+
+    .content .text-groups-2 div {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .content .text-groups-3 div {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    footer {
+        margin: 7% auto;
+    }
+}
