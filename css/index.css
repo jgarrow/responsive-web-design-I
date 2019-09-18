@@ -131,7 +131,7 @@ header nav a {
 }
 
 header nav a:hover {
-	color: white;
+	color: black;
 }
 
 header div {
@@ -369,7 +369,6 @@ footer {
     header nav {
         width: 100%;
         padding: 0 1rem;
-        /* justify-content: space-between; */
     }
 
     header div {
@@ -454,5 +453,13 @@ footer {
 
     footer {
         margin: 7% auto;
+    }
+
+    .banner.services {
+        padding: 3rem 0;
+    }
+
+    .services-offered section {
+        width: 100%;
     }
 }
