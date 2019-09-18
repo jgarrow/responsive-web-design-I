@@ -1,3 +1,465 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* for animation */
+/* @keyframes logoSlide {
+	from { 
+		margin-left: 100%;
+		width: 100%; 
+		vertical-align: middle;
+	}
+	to { 
+		margin-left: 80%;
+		width: 100%;
+		vertical-align: middle;
+	}
+  } */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	/* gets rid of the carriage return in between nav and div */
+	font-size: 0;
+	padding-top: 1rem;
+	width: 80%;
+	margin: 0 auto;
+	background: white;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	/* for fixed navbar */
+	/* overflow: hidden;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999; */
+}
+
+header nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	width: 80%;
+	/* gets rid of the carriage returns in between all of the a tags */
+	font-size: 0;
+	padding-left: 1rem;
+}
+
+header .services-nav {
+	padding: 0;
+}
+
+header nav a {
+	width: calc(100% / 6);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	/* reverts back to initial font size so the links are visible again */
+	font-size: initial;
+	text-decoration: none;
+	color: gray;
+}
+
+header nav a:hover {
+	color: black;
+}
+
+header div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	width: 20%;
+	padding-right: 1rem;
+	/* overflow: hidden; */
+	/* animation-name: logoSlide;
+	animation-duration: 3s; */
+}
+
+header .logo {
+	padding: 0;
+	width: 100%;
+}
+
+.banner {
+	font-size: 0;
+	width: 80%;
+	margin: 0 auto;
+	padding: 6% 0;
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+}
+
+.banner div {
+	text-align: center;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	font-size: initial;
+	padding-left: 7%;
+}
+
+.banner div h1 {
+	font-size: 85px;
+}
+
+.banner div a {
+	border: 1px solid black;
+	padding: 7px 40px;
+	text-decoration: none;
+	color: black;
+	display: flex;
+	margin-top: 1%;
+	background: none;
+}
+
+.banner div a:hover {
+	background: lightgray;
+}
+
+.banner .index-heading {
+	margin-right: 3rem;
+}
+
+.banner .banner-img {
+	text-align: right;
+	display: flex;
+	padding-left: 10px;
+}
+
+.services {
+	padding-bottom: 2.5%;
+}
+
+.services div {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+}
+
+.services img {
+	width: 100%;
+}
+
+.services .banner-content {
+	padding: 0;
+	margin-top: 2.5rem;
+	align-items: flex-start;
+	text-align: initial;
+}
+
+.services .banner-content h2 {
+	font-size: 30px;
+}
+
+.services .banner-content p {
+	margin-top: 5px;
+}
+
+.content {
+	font-size: 0;
+	width: 80%;
+	margin: 0 auto;
+	border-bottom: 1px solid black;
+}
+
+.content .row {
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 0;
+	width: 100%;
+	padding: 4% 0;
+}
+
+.content .row div {
+	display: flex;
+	flex-flow: column;
+	font-size: initial;
+	padding-right: 1rem;
+}
+
+.content .text-groups-2 div {
+	width: 50%;
+}
+
+.content .middle-img {
+	font-size: initial;
+	width: 100%;
+}
+
+.content .text-groups-3 div {
+	width: 33.3%;
+}
+
+.services-offered {
+	font-size: initial;
+	width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+	border-bottom: 2px solid black;
+	padding-bottom: 2rem;
+	margin: 0 auto;
+}
+
+.services-offered div {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.services-offered section {
+	width: calc(50% - 1rem);
+	border: 0.5px solid black;
+	background: lightgray;
+	padding: 1.5rem;
+	margin: 1rem 0;
+	justify-content: space-between;
+}
+
+.services-offered section h3 {
+	font-size: 18px;
+}
+
+.services-offered section p {
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.services-offered section a {
+	border: 0.5px solid gray;
+	border-radius: 5px;
+	padding: 0.5rem 2rem;
+	background: white;
+	margin-top: 2rem;
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
+}
+
+.contact {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+footer {
+	width: 80%;
+	margin: 3% auto 7%;
+	text-align: center;
+}
+
+.services-foot {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 2.5rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.services-foot div {
+	width: 50%;
+	display: flex;
+}
+
+.services-foot ul {
+	list-style-type: square;
+	line-height: 2;
+	list-style-position: inside;
+}
+
+.services-foot .foot-content {
+	justify-content: flex-start;
+}
+
+.services-foot .content-positioning {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+.services-foot .foot-img {
+	justify-content: flex-end;
+}
+
+.copyright {
+	text-align: center;
+	margin: 7rem 1.2rem 1.2rem 1.2rem;
+}
+
+
+@media (max-width: 800px) {
+	header {
+        flex-flow: column-reverse;
+        width: 100%;
+    }
+
+    header nav {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    header div {
+        padding-right: 0;
+        margin: 1rem auto 2rem;
+        width: 30%;
+    }
+
+    header nav a {
+        justify-content: center;
+    }
+
+    .banner .index-heading {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    .banner-img img {
+        display: none;
+    }
+
+    .services-foot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-foot .foot-content {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .services-foot .foot-img{
+        width: 100%;
+        margin: 6% auto;
+        justify-content: center;
+    }
+
+    .copyright {
+        margin: 2%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    header nav a {
+        width: 100%;
+        padding: 0.5rem;
+        border-bottom: 1px solid gray;
+    }
+
+    header nav a:first-child {
+        border-top: 1px solid gray;
+    }
+
+    header div {
+        margin: 0 auto 1rem;
+        width: 30%;
+    }
+
+    .banner {
+        padding: 3rem 0 5rem;
+    }
+
+    .content .text-groups-2 div {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .content .text-groups-3 div {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    footer {
+        margin: 7% auto;
+    }
+
+    .banner.services {
+        padding: 3rem 0;
+    }
+
+    .services-offered section {
+        width: 100%;
+    }
+}
